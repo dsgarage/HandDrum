@@ -59,7 +59,7 @@
       1020.0,
       20.0
      ],
-     "text": "使い方: ① 解析 → ② カメラ → ③ 手をかざして指を振り下ろすと近い音色が鳴る"
+     "text": "使い方: ① [サンプル読込](2回目以降は開くだけで復元) → ② 音声 ON → ③ トグルでカメラ ON → ④ 指を振り下ろすと近い音色が鳴る"
     }
    },
    {
@@ -120,13 +120,7 @@
       37.0,
       22.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      17.0,
-      360.0,
-      40.0,
-      22.0
-     ],
+     "presentation": 0,
      "text": "open"
     }
    },
@@ -256,13 +250,7 @@
       24.0,
       24.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      18.0,
-      950.0,
-      24.0,
-      24.0
-     ]
+     "presentation": 0
     }
    },
    {
@@ -316,13 +304,7 @@
       47.0,
       22.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      208.0,
-      950.0,
-      47.0,
-      22.0
-     ],
+     "presentation": 0,
      "text": "flipy 0"
     }
    },
@@ -341,13 +323,7 @@
       47.0,
       22.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      262.0,
-      950.0,
-      47.0,
-      22.0
-     ],
+     "presentation": 0,
      "text": "flipy 1"
     }
    },
@@ -948,13 +924,7 @@
       260.0,
       47.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      829.0,
-      992.0,
-      517.0,
-      20.0
-     ],
+     "presentation": 0,
      "text": "調整: 反応が鈍い→[threshold 0.02] / 上下が逆→[flipy] / 誤検出→[refractory 200] / ログ→[taplog]"
     }
    },
@@ -2611,13 +2581,7 @@
       24.0,
       24.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      910.0,
-      97.0,
-      24.0,
-      24.0
-     ]
+     "presentation": 0
     }
    },
    {
@@ -2754,13 +2718,7 @@
       240.0,
       20.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      48.0,
-      952.0,
-      199.0,
-      20.0
-     ],
+     "presentation": 0,
      "text": "← タップログ (taplog。debug は js 予約語のため不可)"
     }
    },
@@ -4863,13 +4821,7 @@
       24.0,
       24.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      960.0,
-      97.0,
-      24.0,
-      24.0
-     ]
+     "presentation": 0
     }
    },
    {
@@ -4885,13 +4837,7 @@
       110.0,
       20.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      988.0,
-      100.0,
-      230.0,
-      20.0
-     ]
+     "presentation": 0
     }
    },
    {
@@ -4927,13 +4873,7 @@
       24.0,
       24.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      1100.0,
-      97.0,
-      24.0,
-      24.0
-     ]
+     "presentation": 0
     }
    },
    {
@@ -4949,13 +4889,7 @@
       300.0,
       20.0
      ],
-     "presentation": 1,
-     "presentation_rect": [
-      1128.0,
-      100.0,
-      250.0,
-      20.0
-     ]
+     "presentation": 0
     }
    },
    {
