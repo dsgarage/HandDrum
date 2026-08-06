@@ -361,17 +361,17 @@
      "patching_rect": [
       450.0,
       120.0,
-      400.0,
+      420.0,
       21.0
      ],
      "presentation": 1,
      "presentation_rect": [
       17.0,
       336.0,
-      320.0,
+      460.0,
       21.0
      ],
-     "text": "② カメラ: open → トグル ON"
+     "text": "② カメラ: トグル ON で起動(open/close は自動。手動ボタンも可)"
     }
    },
    {
@@ -5535,6 +5535,26 @@
       22.0
      ]
     }
+   },
+   {
+    "box": {
+     "id": "obj-360",
+     "maxclass": "newobj",
+     "text": "sel 1 0",
+     "numinlets": 1,
+     "numoutlets": 3,
+     "outlettype": [
+      "bang",
+      "bang",
+      ""
+     ],
+     "patching_rect": [
+      95.0,
+      45.0,
+      50.0,
+      22.0
+     ]
+    }
    }
   ],
   "lines": [
@@ -8760,6 +8780,42 @@
      ],
      "destination": [
       "obj-128",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      0
+     ],
+     "destination": [
+      "obj-360",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-360",
+      0
+     ],
+     "destination": [
+      "obj-4",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-360",
+      1
+     ],
+     "destination": [
+      "obj-5",
       0
      ]
     }
