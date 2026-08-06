@@ -61,12 +61,29 @@ function corpuspaths(op) {
         return;
     }
     if (op !== "save" && op !== "load") return;
+    if (op === "load" && !corpusExists(dir)) {
+        outlet(2, ["set", "コーパス未保存 — 先に[コーパス保存]"]);
+        post("hd.samplepath: corpus load 中止(corpus.* が見つかりません)\n");
+        return;
+    }
     outlet(3, [op,
         dir + "corpus.sound.wav",
         dir + "corpus.slicepoints.wav",
         dir + "corpus.kdtree.json",
         dir + "corpus.normalized.json"]);
     post("hd.samplepath: corpus " + op + " → " + dir + "corpus.*\n");
+}
+
+// コーパス4ファイルが全て存在するか (File はファイルの存在確認には信頼できる。Folder は不可)
+function corpusExists(dir) {
+    var names = ["corpus.sound.wav", "corpus.slicepoints.wav", "corpus.kdtree.json", "corpus.normalized.json"];
+    for (var i = 0; i < names.length; i++) {
+        var f = new File(dir + names[i]);
+        var ok = f.isopen;
+        f.close();
+        if (!ok) return false;
+    }
+    return true;
 }
 
 function patchDir() {
