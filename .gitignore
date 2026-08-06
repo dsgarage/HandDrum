@@ -1,0 +1,15 @@
+# --- 音源(Loopcloud 等ライセンス素材。リポジトリには入れない) ---
+sampleloop/*
+!sampleloop/.gitkeep
+
+# --- コーパス保存ファイル(音源由来の派生物) ---
+corpus.sound.wav
+corpus.slicepoints.wav
+corpus.kdtree.json
+corpus.normalized.json
+
+# --- バックアップ / OS ---
+*.maxpat.bak
+.DS_Store
+._*
+Max Debug Log.txt
