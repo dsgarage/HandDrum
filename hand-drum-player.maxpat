@@ -2659,7 +2659,7 @@
       800.0,
       21.0
      ],
-     "text": "① 準備: 初回は [サンプル読込] → Bang 解析 → [コーパス保存]。2回目以降は [コーパス読込] だけで演奏できます"
+     "text": "① 準備: [サンプル読込] を押すだけ(読込 → 解析 → コーパス保存まで自動)。2回目以降は開くだけで復元されます"
     }
    },
    {
@@ -5664,6 +5664,43 @@
       22.0
      ]
     }
+   },
+   {
+    "box": {
+     "id": "obj-380",
+     "maxclass": "newobj",
+     "text": "t b b",
+     "numinlets": 1,
+     "numoutlets": 2,
+     "outlettype": [
+      "bang",
+      "bang"
+     ],
+     "patching_rect": [
+      1100.0,
+      160.0,
+      40.0,
+      22.0
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-387",
+     "maxclass": "newobj",
+     "text": "del 500",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      "bang"
+     ],
+     "patching_rect": [
+      1100.0,
+      200.0,
+      50.0,
+      22.0
+     ]
+    }
    }
   ],
   "lines": [
@@ -6151,19 +6188,6 @@
       0
      ],
      "order": 0,
-     "source": [
-      "obj-156",
-      0
-     ]
-    }
-   },
-   {
-    "patchline": {
-     "destination": [
-      "obj-59",
-      0
-     ],
-     "order": 2,
      "source": [
       "obj-156",
       0
@@ -9033,6 +9057,66 @@
      ],
      "destination": [
       "obj-62",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-156",
+      0
+     ],
+     "destination": [
+      "obj-380",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-380",
+      1
+     ],
+     "destination": [
+      "obj-59",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-380",
+      0
+     ],
+     "destination": [
+      "obj-110",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-57",
+      0
+     ],
+     "destination": [
+      "obj-387",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-387",
+      0
+     ],
+     "destination": [
+      "obj-311",
       0
      ]
     }
