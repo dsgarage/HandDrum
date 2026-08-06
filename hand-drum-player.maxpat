@@ -2649,17 +2649,17 @@
      "patching_rect": [
       900.0,
       40.0,
-      420.0,
+      700.0,
       21.0
      ],
      "presentation": 1,
      "presentation_rect": [
       20.0,
       74.0,
-      392.0,
+      800.0,
       21.0
      ],
-     "text": "① 解析: [読込] → 波形確認 → Bang(連打しない)。パス欄は編集可"
+     "text": "① 準備: 初回は [サンプル読込] → Bang 解析 → [コーパス保存]。2回目以降は [コーパス読込] だけで演奏できます"
     }
    },
    {
@@ -4876,7 +4876,7 @@
     "box": {
      "id": "obj-318",
      "maxclass": "comment",
-     "text": "← コーパス保存",
+     "text": "← コーパス保存(解析済み状態を書き出し)",
      "numinlets": 1,
      "numoutlets": 0,
      "patching_rect": [
@@ -4889,7 +4889,7 @@
      "presentation_rect": [
       988.0,
       100.0,
-      100.0,
+      230.0,
       20.0
      ]
     }
@@ -4940,7 +4940,7 @@
     "box": {
      "id": "obj-329",
      "maxclass": "comment",
-     "text": "← コーパス読込(サンプル読込・解析ともスキップ)",
+     "text": "← コーパス読込(2回目以降はこれだけ)",
      "numinlets": 1,
      "numoutlets": 0,
      "patching_rect": [
@@ -5347,6 +5347,28 @@
       50.0,
       22.0
      ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-344",
+     "maxclass": "comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      900.0,
+      45.0,
+      110.0,
+      20.0
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      845.0,
+      74.0,
+      120.0,
+      21.0
+     ],
+     "text": "↓サンプル読込"
     }
    }
   ],
