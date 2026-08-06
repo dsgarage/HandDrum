@@ -101,3 +101,9 @@ corpus.normalized.json    2 次元データセット(plotter 表示用)
 - FluCoMa (Fluid Corpus Manipulation) — University of Huddersfield
 - sg.landmark_detector — 後藤英氏(Max Summer School in 藝大 2026 教材)
 - 制作: Max Summer School in 藝大 2026 中級コース Day4 黙々タイム
+
+## ライセンス
+
+MIT License([LICENSE](LICENSE) 参照)。
+FluCoMa と sg.landmark_detector は同梱していません(各配布元のライセンスに従ってください)。
+`sampleloop/` に入れる音源は各自で用意してください(ライセンス素材はリポジトリに含めない)。
