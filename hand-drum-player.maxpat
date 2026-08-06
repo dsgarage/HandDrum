@@ -5256,6 +5256,98 @@
       22.0
      ]
     }
+   },
+   {
+    "box": {
+     "id": "obj-340",
+     "maxclass": "led",
+     "numinlets": 1,
+     "numoutlets": 1,
+     "oncolor": [
+      0.25,
+      0.85,
+      0.25,
+      1.0
+     ],
+     "outlettype": [
+      "int"
+     ],
+     "parameter_enable": 0,
+     "patching_rect": [
+      1300.0,
+      610.0,
+      24.0,
+      24.0
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      1389.0,
+      128.5,
+      24.0,
+      24.0
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-341",
+     "maxclass": "comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      1330.0,
+      612.0,
+      200.0,
+      20.0
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      1430.0,
+      130.5,
+      220.0,
+      22.0
+     ],
+     "text": "音声(消灯なら ezdac~ をクリック)"
+    }
+   },
+   {
+    "box": {
+     "id": "obj-342",
+     "maxclass": "newobj",
+     "text": "adstatus switch",
+     "numinlets": 2,
+     "numoutlets": 2,
+     "outlettype": [
+      "",
+      "int"
+     ],
+     "patching_rect": [
+      1300.0,
+      545.0,
+      95.0,
+      22.0
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-343",
+     "maxclass": "newobj",
+     "text": "change",
+     "numinlets": 1,
+     "numoutlets": 3,
+     "outlettype": [
+      "",
+      "int",
+      "int"
+     ],
+     "patching_rect": [
+      1300.0,
+      578.0,
+      50.0,
+      22.0
+     ]
+    }
    }
   ],
   "lines": [
@@ -8253,6 +8345,42 @@
      ],
      "destination": [
       "obj-133",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-114",
+      0
+     ],
+     "destination": [
+      "obj-342",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-342",
+      1
+     ],
+     "destination": [
+      "obj-343",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-343",
+      0
+     ],
+     "destination": [
+      "obj-340",
       0
      ]
     }
