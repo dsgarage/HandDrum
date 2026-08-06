@@ -60,13 +60,15 @@ function corpuspaths(op) {
         outlet(2, ["set", "パス取得不可(パッチ未保存)"]);
         return;
     }
-    if (op !== "save" && op !== "load") return;
-    if (op === "load" && !corpusExists(dir)) {
-        outlet(2, ["set", "コーパス未保存 — 先に[コーパス保存]"]);
-        post("hd.samplepath: corpus load 中止(corpus.* が見つかりません)\n");
+    if (op !== "save" && op !== "load" && op !== "autoload") return;
+    // autoload = 起動時の自動読込。ファイルが無いのは正常系(初回起動)なので黙ってスキップする
+    if (op !== "save" && !corpusExists(dir)) {
+        if (op === "load") outlet(2, ["set", "コーパス未保存 — 先に[コーパス保存]"]);
+        post("hd.samplepath: corpus " + op + " スキップ(corpus.* が見つかりません)\n");
         return;
     }
-    outlet(3, [op,
+    if (op === "autoload") post("hd.samplepath: 保存済みコーパスを自動読込します\n");
+    outlet(3, [(op === "save") ? "save" : "load",
         dir + "corpus.sound.wav",
         dir + "corpus.slicepoints.wav",
         dir + "corpus.kdtree.json",

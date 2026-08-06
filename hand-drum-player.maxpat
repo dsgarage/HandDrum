@@ -5555,6 +5555,42 @@
       22.0
      ]
     }
+   },
+   {
+    "box": {
+     "id": "obj-361",
+     "maxclass": "newobj",
+     "text": "del 1500",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      "bang"
+     ],
+     "patching_rect": [
+      300.0,
+      1140.0,
+      55.0,
+      22.0
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "obj-362",
+     "maxclass": "message",
+     "text": "corpuspaths autoload",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      300.0,
+      1170.0,
+      125.0,
+      22.0
+     ]
+    }
    }
   ],
   "lines": [
@@ -8816,6 +8852,42 @@
      ],
      "destination": [
       "obj-5",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-97",
+      0
+     ],
+     "destination": [
+      "obj-361",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-361",
+      0
+     ],
+     "destination": [
+      "obj-362",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-362",
+      0
+     ],
+     "destination": [
+      "obj-102",
       0
      ]
     }
