@@ -107,7 +107,7 @@
     "box": {
      "id": "obj-5",
      "maxclass": "newobj",
-     "text": "fluid.concataudiofiles @destination sound",
+     "text": "fluid.concataudiofiles @destination diag.sound",
      "patching_rect": [
       30,
       185,
@@ -125,7 +125,7 @@
     "box": {
      "id": "obj-6",
      "maxclass": "newobj",
-     "text": "buffer~ sound",
+     "text": "buffer~ diag.sound",
      "patching_rect": [
       300,
       150,
@@ -195,7 +195,7 @@
     "box": {
      "id": "obj-8",
      "maxclass": "newobj",
-     "text": "info~ sound",
+     "text": "info~ diag.sound",
      "patching_rect": [
       30,
       270,

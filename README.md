@@ -27,10 +27,15 @@ hd.fingers.js             指先抽出・タップ検出・plotter 連携(パッ
 hd.samplepath.js          起動時に <パッチのある場所>/sampleloop のフルパスを生成(同上)
 sampleloop/               ここに好きな WAV(ドラムループ等)を入れる ← 既定の読込先
 diag-corpus-load.maxpat   読込チェッカー(開くだけで sampleloop を読込→バッファ長を表示)※パス直書き
+                          専用バッファ diag.sound を使うため本体と同時に開いても干渉しない
 sound-check.maxpat        サウンドチェック(サイン波+コーパス再生)
 sound-probe.maxpat        無音切り分けプローブ(開くと 1 秒後サイン波 / 4 秒後ドラム。
                           ドラムは hand-drum-player 側で [読込] 済みのときだけ鳴る)
 ```
+
+> **診断ツールの注意**: sound-check / sound-probe は本体の buffer~ `sound` を読む設計のため、
+> 本体パッチを開いて [読込] を済ませた状態で使ってください(単体で開くとドラムは鳴りません)。
+> 読むだけなので同時に開いても本体側のバッファを書き換えることはありません。
 
 > このフォルダ(HandDrum/)は単体で持ち運べる自己完結バンドルです。
 > パッチ・js・sampleloop/ を**同じフォルダのまま**移動してください。
