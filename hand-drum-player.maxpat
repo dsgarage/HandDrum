@@ -516,6 +516,112 @@
             },
             {
                 "box": {
+                    "id": "obj-390",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 520.0, 60.0, 200.0, 20.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 1384.0, 371.0, 200.0, 21.0 ],
+                    "text": "タップ感度(本番中に調整可)"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-391",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 520.0, 88.0, 95.0, 22.0 ],
+                    "text": "loadmess 0.035"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-392",
+                    "maxclass": "flonum",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "bang" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 520.0, 118.0, 70.0, 22.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 1389.0, 395.0, 70.0, 22.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-393",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 520.0, 148.0, 115.0, 22.0 ],
+                    "text": "prepend threshold"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-394",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 595.0, 120.0, 170.0, 20.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 1464.0, 397.0, 180.0, 20.0 ],
+                    "text": "threshold(小さいほど敏感)"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-395",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 650.0, 88.0, 85.0, 22.0 ],
+                    "text": "loadmess 150"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-396",
+                    "maxclass": "number",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "bang" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 650.0, 118.0, 70.0, 22.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 1389.0, 425.0, 70.0, 22.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-397",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 650.0, 148.0, 120.0, 22.0 ],
+                    "text": "prepend refractory"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-398",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 775.0, 120.0, 170.0, 20.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 1464.0, 427.0, 180.0, 20.0 ],
+                    "text": "refractory ms(連打抑制)"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-41",
                     "maxclass": "ezdac~",
                     "numinlets": 2,
@@ -3399,6 +3505,42 @@
                 "patchline": {
                     "destination": [ "obj-9", 0 ],
                     "source": [ "obj-12", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-392", 0 ],
+                    "source": [ "obj-391", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-393", 0 ],
+                    "source": [ "obj-392", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-9", 0 ],
+                    "source": [ "obj-393", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-396", 0 ],
+                    "source": [ "obj-395", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-397", 0 ],
+                    "source": [ "obj-396", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-9", 0 ],
+                    "source": [ "obj-397", 0 ]
                 }
             },
             {
