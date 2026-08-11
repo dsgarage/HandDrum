@@ -500,6 +500,8 @@
                     "presentation_rect": [ 1259.0, 483.0, 181.0, 528.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
+                            "parameter_initial": [ 0.0 ],
+                            "parameter_initial_enable": 1,
                             "parameter_longname": "hd_gain",
                             "parameter_mmax": 6.0,
                             "parameter_mmin": -70.0,
